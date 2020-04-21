@@ -13,5 +13,15 @@ namespace rpg.Service
         {
             _session = hca.HttpContext.Session;
         }
+        /* Použije se => konstruktor v jiné třídě => 
+            Konstruktor(SessionStorage session)
+            { 
+                ss = session;
+            }
+            public void OnGet()
+            {
+                session.number = 420;
+            }
+        */
     }
 }
