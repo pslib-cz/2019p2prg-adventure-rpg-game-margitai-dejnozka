@@ -11,6 +11,7 @@ namespace rpg.Service
     {
         readonly ISession _session;
         public List<Room> Rooms = new List<Room>();
+        public Player player = new Player(100);
         public Logic(IHttpContextAccessor hca)
         {
             _session = hca.HttpContext.Session;
@@ -26,6 +27,8 @@ namespace rpg.Service
 
             Rooms.Add(new Room("Hospoda"));
             Rooms[2].AddTravelPsbl("Hlavní cesta");
+
+            player.CurrentRoom = Rooms[0];
         }
     }
 }

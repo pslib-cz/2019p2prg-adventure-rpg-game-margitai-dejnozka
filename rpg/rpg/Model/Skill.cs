@@ -14,14 +14,9 @@ namespace rpg.Model
             Name = name;
             Learned = learned;
         }
-        public void AddSkill()
-        {
-            Skill ExtraSlot = new Skill("ExtraSlot", false);
-
-        }
         public void LearnSkill()
         {
-
+            Learned = true;
         }
 
     }

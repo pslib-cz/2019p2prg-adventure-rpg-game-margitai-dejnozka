@@ -12,7 +12,7 @@ namespace rpg.Model
         public Room CurrentRoom { get; set; }
         public List<Item> Inventory = new List<Item>();
 
-        public Player(int hp, Room currentRoom, int gold = 0)
+        public Player(int hp, Room currentRoom = null, int gold = 0)
         {
             HP = hp;
             CurrentRoom = currentRoom;

@@ -13,15 +13,17 @@ namespace rpg.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly Logic _logic;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, Logic logic)
         {
             _logger = logger;
+            _logic = logic;
         }
 
         public void OnGet()
         {
-
+            _logic.StartGame();
         }
     }
 }

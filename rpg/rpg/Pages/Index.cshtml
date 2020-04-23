@@ -5,7 +5,9 @@
 }
 
     <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-        <input hidden="hidden" asp-for="@Model.Player." />     <p>@Model.Imagesrc </p>
+        <h1>@_logic.player.CurrentRoom.Name</h1>
+        @foreach(Room room in _logic.player.CurrentRoom.TravelPsbl)
+        {
+            <a class="btn btn-primary">@room.Name</a>
+        }
     </div>
