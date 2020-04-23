@@ -8,13 +8,15 @@ namespace rpg.Model
     public class Player
     {
         public int HP { get; set; }
-        public Room Location { get; set; }
+        public int Gold { get; set; }
+        public Room CurrentRoom { get; set; }
         public List<Item> Inventory = new List<Item>();
 
-        public Player(int hp, Room location)
+        public Player(int hp, Room currentRoom, int gold = 0)
         {
             HP = hp;
-            Location = location;
+            CurrentRoom = currentRoom;
+            Gold = gold;
         }
         public void AddItem(Item item)
         {
@@ -31,6 +33,17 @@ namespace rpg.Model
                 }
             }
             return null;
+        }
+        public void Travel(Room travelTo)
+        {
+            foreach(Room room in CurrentRoom.TravelPsbl)
+            {
+                if(travelTo.Name == room.Name)
+                {
+                    CurrentRoom = room;
+                    break;
+                }
+            }
         }
     }
 }
