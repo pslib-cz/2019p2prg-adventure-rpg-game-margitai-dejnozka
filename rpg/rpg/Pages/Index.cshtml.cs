@@ -13,7 +13,7 @@ namespace rpg.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly Logic _logic;
+        public readonly Logic _logic;
 
         public IndexModel(ILogger<IndexModel> logger, Logic logic)
         {
