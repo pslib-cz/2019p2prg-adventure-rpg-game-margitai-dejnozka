@@ -11,10 +11,26 @@ namespace rpg.Model
         public Room Location { get; set; }
         public List<Item> Inventory = new List<Item>();
 
-        public Player(int hP, Room location)
+        public Player(int hp, Room location)
         {
-            HP = hP;
+            HP = hp;
             Location = location;
+        }
+        public void AddItem(Item item)
+        {
+            Inventory.Add(item);
+        }
+        public Item TakeItem(string Name)
+        {
+            foreach(Item item in Inventory)
+            {
+                if(item.Name == Name)
+                {
+                    Inventory.Remove(item);
+                    return item;
+                }
+            }
+            return null;
         }
     }
 }

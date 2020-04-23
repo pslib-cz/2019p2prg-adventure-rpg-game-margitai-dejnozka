@@ -7,11 +7,15 @@ namespace rpg.Model
 {
     public class Room
     {
+        public string Name { get; }
+        public List<Room> TravelPsbl = new List<Room>();
         public Room(string name)
         {
             Name = name;
         }
-
-        public string Name { get; }
+        public void AddTravelPsbl(string Name)
+        {
+            TravelPsbl.Add(new Room(Name));
+        }
     }
 }
