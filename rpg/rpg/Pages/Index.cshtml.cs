@@ -12,6 +12,7 @@ namespace rpg.Pages
 {
     public class IndexModel : PageModel
     {
+        public readonly SessionStorage _session;
         private readonly ILogger<IndexModel> _logger;
         public readonly Logic _logic;
 
@@ -24,6 +25,10 @@ namespace rpg.Pages
         public void OnGet()
         {
             _logic.StartGame();
+        }
+        public IndexModel(SessionStorage ss)
+        {
+            _session = ss;
         }
     }
 }
