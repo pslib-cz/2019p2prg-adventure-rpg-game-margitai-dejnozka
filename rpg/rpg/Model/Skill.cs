@@ -8,11 +8,11 @@ namespace rpg.Model
     public class Skill
     {
         public bool Learned;
-        public string Name;
-        public Skill(string name, bool learned)
+        public readonly string Name;
+        public Skill(string name)
         {
             Name = name;
-            Learned = learned;
+            Learned = false;
         }
         public void LearnSkill()
         {

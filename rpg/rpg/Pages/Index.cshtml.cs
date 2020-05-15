@@ -13,22 +13,18 @@ namespace rpg.Pages
     public class IndexModel : PageModel
     {
         public readonly SessionStorage _session;
-        private readonly ILogger<IndexModel> _logger;
-        public readonly Logic _logic;
+        //private readonly ILogger<IndexModel> _logger;
+        public readonly Logic logic { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger, Logic logic)
+        public IndexModel(/*ILogger<IndexModel> logger,*/ SessionStorage session)
         {
-            _logger = logger;
-            _logic = logic;
+            //    _logger = logger;
+            _session = session;
         }
 
         public void OnGet()
         {
             _logic.StartGame();
-        }
-        public IndexModel(SessionStorage ss)
-        {
-            _session = ss;
         }
     }
 }
