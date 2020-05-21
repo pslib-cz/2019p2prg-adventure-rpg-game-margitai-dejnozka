@@ -1,0 +1,7 @@
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.csprojAssemblyReference.cache
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.csproj.CoreCompileInputs.cache
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.RazorAssemblyInfo.cache
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.RazorAssemblyInfo.cs
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.AssemblyInfoInputs.cache
+C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.AssemblyInfo.cs
