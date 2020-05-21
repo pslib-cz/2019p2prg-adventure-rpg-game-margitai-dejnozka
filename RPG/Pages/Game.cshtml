@@ -1,0 +1,13 @@
+﻿@page
+@model RPG.Pages.GameModel
+@{
+    ViewData["Title"] = "Game";
+}
+
+<div class="text-center">
+    <p>@Model.game.player.currentPlace.Description</p>
+    @foreach(RPG.Models.Place place in Model.game.Places)
+    { 
+        <button type="submit" onclick="@Model.game.player.Travel(place)">@place.Name</button>
+    }
+</div>

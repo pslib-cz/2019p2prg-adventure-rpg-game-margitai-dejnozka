@@ -1,10 +1,10 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "RPG";
 }
 
 <div class="text-center">
     <p>Ahoj! Vítej v našem RPG!</p>
-    <button type="submit" action="@Model.Play()">Začít hru</button>
+    <p><a asp-page="/Game">Začít hrát!</a></p>
 </div>
