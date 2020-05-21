@@ -1,4 +1,5 @@
 ﻿using RPG_Game.Models;
+using Session.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,11 @@ namespace RPG.Service
     {
         public List<Place> Places = new List<Place>();
         public Player player = new Player("player", 100, new Place("", ""));
-        public void StartGame()
+        private readonly SessionStorage sessionStorage;
+        public Game(SessionStorage _sessionStorage)
         {
+            sessionStorage = _sessionStorage;
+
             Places.Add(new Place("cesta", "Jsi na cestě, můžeš jít do blízkého města, nebo do temného lesa"));
             Places[0].AddTravelPsb(new Place("vesnice", ""));
             Places[0].AddTravelPsb(new Place("kraj temného lesu", ""));
