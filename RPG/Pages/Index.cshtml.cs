@@ -12,8 +12,6 @@ namespace RPG.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public Player player = new Player("Smazak", 100, new Place("cesta", "Nacházíš se na cestě lemované borovicemi"));
-
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;

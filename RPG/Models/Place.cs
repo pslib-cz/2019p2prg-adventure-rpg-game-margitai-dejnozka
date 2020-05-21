@@ -8,10 +8,10 @@ namespace RPG_Game.Models
     public class Place
     {
         public string Name { get; }
-        public string Description { get; }
+        public string Description { get; set; }
         public List<Place> TravelPsb = new List<Place>();
 
-        public Place(string name, string Description)
+        public Place(string name, string description)
         {
             Name = name;
             Description = description;
