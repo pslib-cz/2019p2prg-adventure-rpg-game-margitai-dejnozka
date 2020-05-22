@@ -60,16 +60,5 @@ namespace RPG.Models
         {
             maxhp = newMaxhp;
         }
-        public void Travel(Place travelTo)
-        {
-            for(int i = 0; i < currentPlace.TravelPsb.Count; i++)
-            {
-                if(currentPlace.TravelPsb[i].Name == travelTo.Name)
-                {
-                    currentPlace = travelTo;
-                    break;
-                }
-            }
-        }
     }
 }
