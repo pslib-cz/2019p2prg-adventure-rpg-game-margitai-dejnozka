@@ -20,6 +20,7 @@ namespace RPG.Models
             currentPlace = _currentPlace;
             maxhp = hp;
         }
+        //metody přesunout do gameLogic
         public void SetHp(int newhp)
         {
             if(newhp > maxhp || newhp < 0)

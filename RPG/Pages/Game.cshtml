@@ -8,8 +8,6 @@
         <p>@Model.game.player.currentPlace.Description</p>
         @foreach (RPG.Models.Place place in Model.game.player.currentPlace.TravelPsb)
         {
-            <form method="get">
-                <div><a asp-page-handler="Travel" class="btn btn-primary" place="@place">@place</a></div>
-            </form>
+            <div><a asp-page-handler="Travel" asp-route-placeName="@place.Name" class="btn btn-primary">@place.Name</a></div>
         }
     </div>

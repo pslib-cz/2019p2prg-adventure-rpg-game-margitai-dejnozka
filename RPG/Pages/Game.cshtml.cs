@@ -12,9 +12,9 @@ namespace RPG.Pages
     public class GameModel : PageModel
     {
         public Game game = new Game();
-        public void OnGetTravel(Place place)
+        public void OnGetTravel(string placeName)
         {
-            game.player.currentPlace = place;
+            game.player.currentPlace = placeName;
         }
     }
 }
