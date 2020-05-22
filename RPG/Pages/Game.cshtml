@@ -4,10 +4,12 @@
     ViewData["Title"] = "Game";
 }
 
-<div class="text-center">
-    <p>@Model.game.player.currentPlace.Description</p>
-    @foreach(RPG.Models.Place place in Model.game.Places)
-    { 
-        <button type="submit" asp-page="/Game" asp-route="@Model.game.player.SetPlace(place)">@place.Name</button>
-    }
-</div>
+    <div class="text-center">
+        <p>@Model.game.player.currentPlace.Description</p>
+        @foreach (RPG.Models.Place place in Model.game.player.currentPlace.TravelPsb)
+        {
+            <form method="get">
+                <div><a asp-page-handler="Travel" class="btn btn-primary" place="@place">@place</a></div>
+            </form>
+        }
+    </div>

@@ -43,6 +43,8 @@ namespace RPG
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            //add session
+
             app.UseRouting();
 
             app.UseAuthorization();

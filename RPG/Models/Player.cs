@@ -12,6 +12,7 @@ namespace RPG.Models
         public Place currentPlace { get; set; }
         public int maxhp { get; set; }
 
+        public List<Item> Inventory = new List<Item>();
         public Player(string name, int hp, Place _currentPlace)
         {
             Name = name;
