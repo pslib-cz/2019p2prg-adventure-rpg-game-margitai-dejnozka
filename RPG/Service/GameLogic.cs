@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RPG.Models;
+using RPG.Service;
 
 namespace RPG.Service
 {
     public class GameLogic
     {
-        public GameStart game = new GameStart();
         private readonly SessionStorage sessionStorage;
+        public Story story = new Story();
+        public Player player;
         public GameLogic(SessionStorage _sessionStorage)
         {
             sessionStorage = _sessionStorage;
+        }
+        public void Travel()
+        {
+         
         }
     }
 }

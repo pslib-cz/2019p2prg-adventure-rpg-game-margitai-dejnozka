@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RPG.Models;
+using RPG.Helpers;
 
 namespace RPG.Service
 {
@@ -13,10 +14,6 @@ namespace RPG.Service
         public SessionStorage(IHttpContextAccessor hca)
         {
             _session = hca.HttpContext.Session;
-        }
-        public void SetHP(int HP)
-        {
-            _hp = HP;
         }
     }
 }

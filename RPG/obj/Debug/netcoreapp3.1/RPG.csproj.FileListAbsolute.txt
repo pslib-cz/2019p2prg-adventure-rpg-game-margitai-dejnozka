@@ -106,6 +106,4 @@ C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\bin\Debug\netcoreapp3.1\ru\Microsoft
 C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.csproj.CoreCompileInputs.cache
-C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\RPG.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Aspir\OneDrive\Plocha\RPG_Game\RPG\obj\Debug\netcoreapp3.1\Razor\Pages\Game.cshtml.g.cs

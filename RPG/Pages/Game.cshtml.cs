@@ -11,6 +11,6 @@ namespace RPG.Pages
 {
     public class GameModel : PageModel
     {
-        public GameStart game = new GameStart();
+        public Story game = new Story();
     }
 }
