@@ -9,15 +9,15 @@ namespace RPG.Service
 {
     public class Story
     {
-        public Dictionary<String, Place> Places = new Dictionary<String, Place>();
+        public Dictionary<string, Place> Places = new Dictionary<string, Place>();
         public Story()
         {
-            Places.Add("dul venku", new Place("Před doly", "Probudil si se"));
+            Places.Add("dul venku", new Place("Před doly", "Probudil si se", "none"));
             Places["dul venku"].AddTravelPsb("dul vevnitr");
             Places["dul venku"].AddTravelPsb("tovarna venku");
             Places["dul venku"].AddTravelPsb("dul vevnitr");
 
-            Places.Add("dul vevnitr", new Place("Uvnitř dolů", "Nacházíš se v dolech"));
+            Places.Add("dul vevnitr", new Place("Uvnitř dolů", "Nacházíš se v dolech", "none"));
             Places["dul vevnitr"].AddTravelPsb("dul venku");
             Places["dul vevnitr"].AddTravelPsb("dul zebrik");
             Places["dul vevnitr"].AddTravelPsb("dul vozik");

@@ -11,9 +11,15 @@ namespace RPG.Service
     public class SessionStorage
     {
         readonly ISession _session;
+        public Player Player { get; set; }
         public SessionStorage(IHttpContextAccessor hca)
         {
             _session = hca.HttpContext.Session;
+            Player = _session.Get<Player>("player");
+        }
+        public void SavePlayer(Player player)
+        {
+            _session.Set("player", player);
         }
     }
 }

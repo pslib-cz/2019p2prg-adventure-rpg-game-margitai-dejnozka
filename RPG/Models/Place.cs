@@ -10,26 +10,17 @@ namespace RPG.Models
         public string Name { get; }
         public string Description { get; set; }
         public List<String> TravelPsb = new List<String>();
+        public string Key { get; }
 
-        public Place(string name, string description)
+        public Place(string name, string description, string key)
         {
             Name = name;
             Description = description;
+            Key = key;
         }
         public void AddTravelPsb(String placeName)
         {
             TravelPsb.Add(placeName);
-        }
-        public void RmvTravelPsb(Place delPsb)
-        {
-            for (int i = 0; i < TravelPsb.Count; i++)
-            {
-                if (TravelPsb[i].Name == delPsb.Name)
-                {
-                    TravelPsb.RemoveAt(i);
-                    break;
-                }
-            }
         }
     }
 }

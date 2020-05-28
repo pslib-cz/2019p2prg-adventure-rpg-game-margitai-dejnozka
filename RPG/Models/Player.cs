@@ -10,7 +10,7 @@ namespace RPG.Models
         public string Name { get; }
         public Place CurrentPlace { get; set; }
 
-        public List<String> Inventory = new List<String>();
+        public Dictionary<string, bool> Inventory = new Dictionary<string, bool>();
         public Player(string name, Place _currentPlace)
         {
             Name = name;
