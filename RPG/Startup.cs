@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +25,12 @@ namespace RPG
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<Service.SessionStorage>();
+
             services.AddRazorPages();
         }
 
@@ -43,9 +51,10 @@ namespace RPG
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            //add session
-
             app.UseRouting();
+
+            app.UseAuthorization();
+            app.UseSession();
 
             app.UseAuthorization();
 
