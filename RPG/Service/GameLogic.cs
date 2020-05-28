@@ -15,10 +15,15 @@ namespace RPG.Service
         public GameLogic(SessionStorage _sessionStorage)
         {
             sessionStorage = _sessionStorage;
+            Travel("dul venku");
         }
-        public void Travel(string key)
+        public void Travel(string placeName)
         {
-            Player.CurrentPlace = Story.Places[key];
+            if(Story.Places[placeName].Key == "none")
+            {
+                Player.CurrentPlace = Story.Places[placeName];
+            }
+            //else todo
         }
         public void AddToInv(string item)
         {

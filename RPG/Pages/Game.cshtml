@@ -5,9 +5,9 @@
 }
 
     <div class="text-center">
-        <p>@Model.game.player.CurrentPlace.Description</p>
-        @foreach (RPG.Models.Place place in Model.game.player.CurrentPlace.TravelPsb)
+        <p>@Model.Game.Player.CurrentPlace.Description</p>
+        @foreach (string place in Model.Game.Player.CurrentPlace.TravelPsb)
         {
-            <div><a asp-page-handler="Travel" asp-route-placeName="@place.Name" class="btn btn-primary">@place.Name</a></div>
+            <p>@place</p>
         }
     </div>

@@ -11,6 +11,10 @@ namespace RPG.Pages
 {
     public class GameModel : PageModel
     {
-
+        public readonly GameLogic Game;
+        public GameModel(GameLogic game)
+        {
+            Game = game;
+        }
     }
 }

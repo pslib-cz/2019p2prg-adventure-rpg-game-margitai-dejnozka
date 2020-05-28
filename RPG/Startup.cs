@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RPG.Service;
+using RPG.Models;
 
 namespace RPG
 {
@@ -29,7 +31,9 @@ namespace RPG
             services.AddSession();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<Service.SessionStorage>();
+            services.AddSingleton<Story>();
+            services.AddScoped<SessionStorage>();
+            services.AddScoped<GameLogic>();
 
             services.AddRazorPages();
         }
