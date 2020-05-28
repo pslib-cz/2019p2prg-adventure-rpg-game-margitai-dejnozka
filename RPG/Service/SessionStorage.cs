@@ -14,5 +14,9 @@ namespace RPG.Service
         {
             _session = hca.HttpContext.Session;
         }
+        public void SetHP(int HP)
+        {
+            _hp = HP;
+        }
     }
 }

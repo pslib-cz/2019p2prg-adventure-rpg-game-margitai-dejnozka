@@ -12,12 +12,10 @@ namespace RPG.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> logger;
-        //private readonly SessionStorage sessionStorage;
-        public IndexModel(ILogger<IndexModel> _logger /*, SessionStorage _sessionStorage*/)
+        private readonly SessionStorage sessionStorage;
+        public IndexModel(SessionStorage _sessionStorage)
         {
-            logger = _logger;
-            //sessionStorage = _sessionStorage;
+            sessionStorage = _sessionStorage;
         }
 
         public void OnGet()

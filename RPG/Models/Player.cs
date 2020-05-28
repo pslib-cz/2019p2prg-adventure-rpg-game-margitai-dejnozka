@@ -8,59 +8,15 @@ namespace RPG.Models
     public class Player
     {
         public string Name { get; }
-        public int Hp { get; set; }
-        public Place currentPlace { get; set; }
-        public int maxhp { get; set; }
+        public int DeathCount { get; set; }
+        public Place CurrentPlace { get; set; }
 
-        public List<Item> Inventory = new List<Item>();
-        public Player(string name, int hp, Place _currentPlace)
+        public List<String> Inventory = new List<String>();
+        public Player(string name, Place _currentPlace)
         {
             Name = name;
-            Hp = hp;
-            currentPlace = _currentPlace;
-            maxhp = hp;
-        }
-        //metody přesunout do gameLogic
-        public void SetHp(int newhp)
-        {
-            if(newhp > maxhp || newhp < 0)
-            {
-                //TODO - nelze provést
-            }
-            else
-            {
-                Hp = newhp;
-            }
-        }
-        public void AddHp(int addhp)
-        {
-            if(Hp + addhp > maxhp)
-            {
-                //TODO - nelze provést
-            }
-            else
-            {
-                Hp += addhp;
-            }
-        }
-        public void RmvHp(int rmvhp)
-        {
-            if (Hp - rmvhp > 0)
-            {
-                //TODO - nelze provést
-            }
-            else
-            {
-                Hp -= rmvhp;
-            }
-        }
-        public void SetPlace(Place newPlace)
-        {
-            currentPlace = newPlace;
-        }
-        public void SetMaxHp(int newMaxhp)
-        {
-            maxhp = newMaxhp;
+            DeathCount = 0;
+            CurrentPlace = _currentPlace;
         }
     }
 }

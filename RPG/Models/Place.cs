@@ -9,16 +9,16 @@ namespace RPG.Models
     {
         public string Name { get; }
         public string Description { get; set; }
-        public List<Place> TravelPsb = new List<Place>();
+        public List<String> TravelPsb = new List<String>();
 
         public Place(string name, string description)
         {
             Name = name;
             Description = description;
         }
-        public void AddTravelPsb(Place newPsb)
+        public void AddTravelPsb(String placeName)
         {
-            TravelPsb.Add(newPsb);
+            TravelPsb.Add(placeName);
         }
         public void RmvTravelPsb(Place delPsb)
         {
