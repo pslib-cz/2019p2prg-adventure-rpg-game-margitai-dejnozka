@@ -16,5 +16,9 @@ namespace RPG.Pages
         {
             Game = game;
         }
+        public void OnGetTravel(string placeName)
+        {
+            Game.Travel(placeName);
+        }
     }
 }

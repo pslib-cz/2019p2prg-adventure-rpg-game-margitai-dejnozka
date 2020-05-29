@@ -8,6 +8,6 @@
         <p>@Model.Game.Player.CurrentPlace.Description</p>
         @foreach (string place in Model.Game.Player.CurrentPlace.TravelPsb)
         {
-            <p>@place</p>
+            <div><a asp-page-handler="Travel" asp-route-item="@place">@place</a></div>
         }
     </div>
