@@ -50,9 +50,11 @@ namespace RPG.Service
             Places["tovarna vraky"].AddTravelPsb("tovarna venku");
             Places["tovarna vraky"].AddTravelPsb("tovarna vraky konec");
 
-            Places.Add("tovarna vraky", new Place("Vrakoviště vedle továrny", "Nasedáš do auta a odjíždíš, přijel si do města...", "kanystr"));
+            Places.Add("tovarna vraky konec", new Place("Vrakoviště vedle továrny", "Nasedáš do auta a odjíždíš, přijel si do města...", "kanystr"));
             Places["tovarna venku"].AddTravelPsb("tovarna vraky");
             Places["tovarna venku"].AddTravelPsb("tovarna vevnitr");
+
+
         }
     }
 }
