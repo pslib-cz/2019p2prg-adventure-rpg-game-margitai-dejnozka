@@ -16,14 +16,38 @@ namespace RPG.Service
         {
             sessionStorage = _sessionStorage;
             Travel("dul venku");
+            Player.Inventory.Add("none", true);
         }
         public void Travel(string placeName)
         {
-            if(Story.Places[placeName].Key == "none")
+            foreach(KeyValuePair<string, bool> Entry in Player.Inventory)
             {
-                Player.CurrentPlace = Story.Places[placeName];
+                if(Entry.Key == Story.Places[placeName].Key)
+                {
+                    Player.CurrentPlace = Story.Places[placeName];
+                    if(Player.CurrentPlace.Name == "dul vozik")
+                    {
+                        Player.Inventory.Add("helma", true);
+                    }
+                    else if(Player.CurrentPlace.Name == "dul tmava mistnost")
+                    {
+                        Player.Inventory.Add("zlata nugetka", true);
+                    }
+                    else if (Player.CurrentPlace.Name == "tovarna obesenec")
+                    {
+                        Player.Inventory.Add("klic", true);
+                    }
+                    else if (Player.CurrentPlace.Name == "hory chaloupka")
+                    {
+                        Player.Inventory.Add("kanystr", true);
+                    }
+                    else if (Player.CurrentPlace.Name == "hory jeskyne")
+                    {
+                        Player.Inventory.Add("svitilna", true);
+                    }
+                    break;
+                }
             }
-            //else todo
         }
         public void AddToInv(string item)
         {
