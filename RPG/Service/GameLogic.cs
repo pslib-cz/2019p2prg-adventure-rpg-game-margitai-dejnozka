@@ -16,36 +16,43 @@ namespace RPG.Service
         {
             sessionStorage = _sessionStorage;
             Travel("dul venku");
-            Player.Inventory.Add("none", true);
+            AddToInv("none");
         }
         public void Travel(string placeName)
         {
-            foreach(KeyValuePair<string, bool> Entry in Player.Inventory)
+            if (Player.Inventory == null)
             {
-                if(Entry.Key == Story.Places[placeName].Key)
+                Player.CurrentPlace = Story.Places[placeName];
+            }
+            else
+            {
+                foreach (KeyValuePair<string, bool> Entry in Player.Inventory)
                 {
-                    Player.CurrentPlace = Story.Places[placeName];
-                    if(Player.CurrentPlace.Name == "dul vozik")
+                    if (Entry.Key == Story.Places[placeName].Key)
                     {
-                        Player.Inventory.Add("helma", true);
+                        Player.CurrentPlace = Story.Places[placeName];
+                        if (Player.CurrentPlace.Name == "dul vozik")
+                        {
+                            AddToInv("helma");
+                        }
+                        else if (Player.CurrentPlace.Name == "dul tmava mistnost")
+                        {
+                            AddToInv("zlata nugetka");
+                        }
+                        else if (Player.CurrentPlace.Name == "tovarna obesenec")
+                        {
+                            AddToInv("klic");
+                        }
+                        else if (Player.CurrentPlace.Name == "hory chaloupka")
+                        {
+                            AddToInv("kanystr");
+                        }
+                        else if (Player.CurrentPlace.Name == "hory jeskyne")
+                        {
+                            AddToInv("svitilna");
+                        }
+                        break;
                     }
-                    else if(Player.CurrentPlace.Name == "dul tmava mistnost")
-                    {
-                        Player.Inventory.Add("zlata nugetka", true);
-                    }
-                    else if (Player.CurrentPlace.Name == "tovarna obesenec")
-                    {
-                        Player.Inventory.Add("klic", true);
-                    }
-                    else if (Player.CurrentPlace.Name == "hory chaloupka")
-                    {
-                        Player.Inventory.Add("kanystr", true);
-                    }
-                    else if (Player.CurrentPlace.Name == "hory jeskyne")
-                    {
-                        Player.Inventory.Add("svitilna", true);
-                    }
-                    break;
                 }
             }
         }

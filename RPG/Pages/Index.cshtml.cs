@@ -13,6 +13,7 @@ namespace RPG.Pages
     public class IndexModel : PageModel
     {
         private readonly SessionStorage sessionStorage;
+        public Player player;
         public IndexModel(SessionStorage _sessionStorage)
         {
             sessionStorage = _sessionStorage;
